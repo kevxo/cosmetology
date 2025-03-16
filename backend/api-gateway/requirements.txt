@@ -1,4 +1,4 @@
 fastapi
 uvicorn
 httpx
-jose[cryptography]
+python-jose[cryptography]
