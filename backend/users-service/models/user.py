@@ -6,4 +6,4 @@ class User(Base):
 
     uuid = Column(String(36), primary_key=True, index=True)
     email = Column(String, unique=True, index=True)
-    hased_password = Column(String)
+    hashed_password = Column(String)

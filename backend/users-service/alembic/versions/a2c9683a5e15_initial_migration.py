@@ -1,7 +1,7 @@
 """Initial migration
 
 Revision ID: a2c9683a5e15
-Revises: 
+Revises:
 Create Date: 2025-03-22 14:01:48.547692
 
 """
@@ -24,7 +24,7 @@ def upgrade() -> None:
     op.create_table('users',
     sa.Column('uuid', sa.String(length=36), nullable=False),
     sa.Column('email', sa.String(), nullable=True),
-    sa.Column('hased_password', sa.String(), nullable=True),
+    sa.Column('hashed_password', sa.String(), nullable=True),
     sa.PrimaryKeyConstraint('uuid')
     )
     op.create_index(op.f('ix_users_email'), 'users', ['email'], unique=True)
