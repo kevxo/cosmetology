@@ -27,3 +27,8 @@ def create_user(user: UserCreate, db: Session) -> User:
     db.refresh(created_user)
 
     return created_user
+
+def find_user(user: UserCreate, db: Session):
+    db_user = db.query(User).filter(User.email == user.email).first()
+
+    return db_user
